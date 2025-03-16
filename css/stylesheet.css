@@ -444,7 +444,7 @@ html {
 
 @media (max-width: 480px) {
     section {
-        height: ;
+        height: auto; 
     }
     h1, .h2-home, .h2-main {
         font-size: 24px;
