@@ -514,4 +514,24 @@ html {
   .github:hover {
     color: #444;
   }
+
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .photo-section,
+    .content-section {
+        width: 100%; /* Make each section take full width */
+        text-align: center; /* Center-align text content */
+        padding: 10px; /* Add some spacing */
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr; /* Show a single column of photos */
+        gap: 10px; /* Add some spacing between photos */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
   
