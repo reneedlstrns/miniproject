@@ -119,7 +119,6 @@ section {
     display: flex; 
     height: 100vh;
     width: 100%;
-    align-items: stretch;
     flex-direction: row; 
   }
 
@@ -304,8 +303,8 @@ section {
     display: flex;
     flex-wrap: wrap; 
     gap: 10px; 
-    width: 80%; /* Set the container's width to 80% of the parent */
-  margin: 0 auto; 
+    width: 80%; 
+    margin: 0 auto; 
   }
 
 
@@ -405,6 +404,9 @@ html {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+    section {
+        height: auto;
+    }
 
     header {
         padding: 10px;
@@ -415,7 +417,7 @@ html {
     }
 
     .h2-home, .h2-main {
-        font-size: 36px;
+        font-size: 50px;
     }
 }
 
@@ -423,7 +425,9 @@ html {
     .photo-grid {
         grid-template-columns: 1fr;
     }
-
+    section {
+        height: auto;
+    }
     .three-column-section {
         flex-direction: column;
         gap: 10px;
@@ -443,9 +447,12 @@ html {
 }
 
 @media (max-width: 480px) {
-    
     h1, .h2-home, .h2-main {
         font-size: 24px;
+    }
+
+    section {
+        height: auto;
     }
 
     .arrow-button {
@@ -515,12 +522,12 @@ html {
     color: #444;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .split-section {
         flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center align items */
+        height: auto;
     }
-
     .photo-section,
     .content-section {
         width: 100%; /* Make each section take full width */
@@ -529,9 +536,295 @@ html {
     }
 
     .photo-grid {
-        grid-template-columns: 1fr; /* Show a single column of photos */
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
         gap: 10px; /* Add some spacing between photos */
         padding: 10px; /* Adjust padding for mobile */
+       
     }
+}
+  
+@media (max-width: 480px) {
+    .split-section {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align items */
+        height: auto;
+    }
+    .photo-section,
+    .content-section {
+        width: 100%; /* Make each section take full width */
+        text-align: center; /* Center-align text content */
+        padding: 10px; /* Add some spacing */
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 10px; /* Add some spacing between photos */
+        padding: 10px; /* Adjust padding for mobile */
+       
+    }
+}
+
+@media (max-width: 1080px) {
+    .split-section {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align items */
+        height: auto;
+    }
+    .photo-section,
+    .content-section {
+        width: 100%; /* Make each section take full width */
+        text-align: center; /* Center-align text content */
+        padding: 10px; /* Add some spacing */
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 10px; /* Add some spacing between photos */
+        padding: 10px; /* Adjust padding for mobile */
+       
+    }
+}
+
+@media (max-width: 1080px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Add spacing between the email info and form */
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Add padding around the container */
+    }
+
+    .email-info, .social-media-icons {
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .icon{
+        font-size: 90px;
+    }
+    .contact-form form {
+        width: 90%; /* Make the form take up most of the screen width */
+        padding: 20px 10px; /* Adjust padding for a cleaner look */
+        margin: 0 auto; /* Center-align the form */
+        font-size: 200%;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px 10px; /* Increase padding for taller input fields */
+        font-size: 40px; /* Ensure the font size is readable on smaller screens */
+    }
+
+    .contact-form textarea {
+        line-height: 1.6; /* Taller appearance for the textarea */
+    }
+
+    .contact-form button {
+        margin-top: 15px;
+        padding: 14px; /* Taller button to match input fields */
+        font-size: 50px; /* Font size adjustment for consistency */
+    }
+
+    .p-button {
+        font-size: 32px;
+    }
+
+    .button-gif{
+        width: 150px;
+    }
+
+    .email-info {
+        padding-bottom: 10px; /* Add spacing below email info */
+    }
+    .popup-content {
+        width: 75%;
+        text-size-adjust: 250%;
+        
+    }
+    .popup-gif{
+        width: 100%;
+    }
+
+    .popup-button {
+        width: 100px;
+    }
+
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Adjust padding for smaller screens */
+        text-align: center; /* Center align content */
+    }
+    #section1 {
+        padding-top: 350Px; /* Slightly larger padding for mobile, if needed */
+    }
+
+    #section2 {
+        padding-top: 350Px; /* Slightly larger padding for mobile, if needed */
+    }
+
+    .header-title {
+        font-size: 50px; /* Slightly smaller title */
+        margin-bottom: 10px; /* Add spacing below the title */
+    }
+
+    .nav-tabs {
+        flex-direction: column; /* Stack navigation links */
+        gap: 0px; /* Add spacing between links */
+    }
+
+    .nav-tabs a {
+        padding: 5px; /* Adjust padding for smaller links */
+        font-size: 32px; /* Make links easier to tap on mobile */
+    }
+
+    .p-home {
+        font-size: 32px;
+    }
+
+    .p-foot {
+        font-size: 32px;
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Add spacing between the email info and form */
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Add padding around the container */
+    }
+
+    .email-info, .social-media-icons {
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .icon{
+        font-size: 90px;
+    }
+    .contact-form form {
+        width: 90%; /* Make the form take up most of the screen width */
+        padding: 20px 10px; /* Adjust padding for a cleaner look */
+        margin: 0 auto; /* Center-align the form */
+        font-size: 200%;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px 10px; /* Increase padding for taller input fields */
+        font-size: 40px; /* Ensure the font size is readable on smaller screens */
+    }
+
+    .contact-form textarea {
+        line-height: 1.6; /* Taller appearance for the textarea */
+    }
+
+    .contact-form button {
+        margin-top: 15px;
+        padding: 14px; /* Taller button to match input fields */
+        font-size: 50px; /* Font size adjustment for consistency */
+    }
+
+    .p-button {
+        font-size: 32px;
+    }
+
+    .button-gif{
+        width: 150px;
+    }
+
+    .email-info {
+        padding-bottom: 10px; /* Add spacing below email info */
+    }
+    .popup-content {
+        width: 75%;
+        text-size-adjust: 250%;
+        
+    }
+    .popup-gif{
+        width: 100%;
+    }
+
+    .popup-button {
+        width: 100px;
+    }
+
+   
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Add spacing between the email info and form */
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Add padding around the container */
+    }
+
+    .email-info, .social-media-icons {
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .icon{
+        font-size: 90px;
+    }
+    .contact-form form {
+        width: 90%; /* Make the form take up most of the screen width */
+        padding: 20px 10px; /* Adjust padding for a cleaner look */
+        margin: 0 auto; /* Center-align the form */
+        font-size: 200%;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px 10px; /* Increase padding for taller input fields */
+        font-size: 40px; /* Ensure the font size is readable on smaller screens */
+    }
+
+    .contact-form textarea {
+        line-height: 1.6; /* Taller appearance for the textarea */
+    }
+
+    .contact-form button {
+        margin-top: 15px;
+        padding: 14px; /* Taller button to match input fields */
+        font-size: 50px; /* Font size adjustment for consistency */
+    }
+
+    .p-button {
+        font-size: 32px;
+    }
+
+    .button-gif{
+        width: 150px;
+    }
+
+    .email-info {
+        padding-bottom: 10px; /* Add spacing below email info */
+    }
+    .popup-content {
+        width: 75%;
+        text-size-adjust: 250%;
+        
+    }
+    .popup-gif{
+        width: 100%;
+    }
+
+    .popup-button {
+        width: 100px;
+    }
+
+   
 }
   
